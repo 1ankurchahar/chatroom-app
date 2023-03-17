@@ -6,7 +6,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 const socketIO = require("socket.io")(http, {
     cors: {
-        origin: process.env.CLIENT_URL,
+        origin: process.env.CLIENT_URL || "http://localhost:3000",
     },
 });
 app.use(cors());
